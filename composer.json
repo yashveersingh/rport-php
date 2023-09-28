@@ -1,0 +1,45 @@
+{
+  "name": "yashveersingh/rport-php",
+  "description": "PHP package for ShellHub api",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "yashveersingh\\rportPHP\\": "src/",
+      "yashveersingh\\rportPHP\\database\\": "database/",
+      "yashveersingh\\rportPHP\\console\\": "console/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "yashveersingh\\rportPHP\\tests\\": "tests/",
+      "yashveersingh\\rportPHP\\": "src/",
+      "yashveersingh\\rportPHP\\database\\": "database/",
+      "yashveersingh\\rportPHP\\console\\": "console/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Yashveer Singh - PHP",
+      "email": "yashveersingh444444@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "orchestra/testbench": "^8.11",
+    "phpunit/phpunit": "^10.3",
+    "mockery/mockery": "^1.6",
+    "laravel/legacy-factories": "^1.3"
+  },
+  "require": {
+    "php": ">=8.1"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "yashveersingh\\rportPHP\\ServiceProviders\\RPortServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
+}
